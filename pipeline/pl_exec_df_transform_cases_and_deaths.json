@@ -1,0 +1,58 @@
+{
+	"name": "pl_exec_df_transform_cases_and_deaths",
+	"properties": {
+		"activities": [
+			{
+				"name": "ValidationIfExists",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_df_raw_cases_death",
+						"type": "DatasetReference"
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
+			},
+			{
+				"name": "Exec Data Flow Tranform Cases and Deaths",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "ValidationIfExists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_transform_cases_deaths",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "pipeline_exec_dataflow"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-07-16T16:27:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

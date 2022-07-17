@@ -1,0 +1,52 @@
+{
+	"name": "pl_exec_dataflow",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_teste",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"source1": {
+								"containerName": "configs",
+								"folderName": {
+									"value": "@toLower('')",
+									"type": "Expression"
+								},
+								"fileName": "ecdc_file_list.json"
+							},
+							"sink1": {
+								"containerName": "raw",
+								"folderName": "ecdc",
+								"fileName": "dataflow.csv"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "pipeline_exec_dataflow"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-07-13T22:22:36Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

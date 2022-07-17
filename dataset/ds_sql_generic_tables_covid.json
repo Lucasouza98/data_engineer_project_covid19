@@ -1,0 +1,31 @@
+{
+	"name": "ds_sql_generic_tables_covid",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlserver_covid",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_TableName": {
+				"type": "string"
+			},
+			"p_SchemaName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().p_SchemaName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().p_TableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

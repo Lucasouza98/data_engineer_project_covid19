@@ -1,0 +1,13 @@
+{
+	"name": "ds_sql_tables_covid",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sqlserver_covid",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
