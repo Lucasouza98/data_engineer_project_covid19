@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-project-covid-reporting"
+		},
+		"ls_ablob_covid_reporting_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covid_reporting_dl_accountKey": {
+			"value": ""
+		},
+		"ls_sqlserver_covid_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covid_reporting_dl_properties_typeProperties_url": {
+			"value": "https://adlsprojectcovid19.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_edcd_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_get_file_storage_events_blob_properties_typeProperties_scope": {
+			"value": "/subscriptions/e1b4fc30-5958-4f94-b314-8d5664a0d531/resourceGroups/rg-reporting-covid/providers/Microsoft.Storage/storageAccounts/saprojectcovidreporting"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
