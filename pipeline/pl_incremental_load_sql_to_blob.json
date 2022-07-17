@@ -124,7 +124,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"containerName": "configs",
-							"fileName": "incremental_load.csv"
+							"fileName": {
+								"value": "@concat('Incremental_',pipeline().RunId,'.txt')",
+								"type": "Expression"
+							}
 						}
 					}
 				]
