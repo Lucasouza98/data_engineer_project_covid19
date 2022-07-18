@@ -45,7 +45,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_generic_ecdc_adls",
+						"referenceName": "ds_adls_rest",
 						"type": "DatasetReference"
 					}
 				]
