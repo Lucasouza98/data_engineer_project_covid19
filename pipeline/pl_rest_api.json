@@ -79,7 +79,8 @@
 									"name": "profile_image"
 								}
 							}
-						]
+						],
+						"collectionReference": ""
 					}
 				},
 				"inputs": [

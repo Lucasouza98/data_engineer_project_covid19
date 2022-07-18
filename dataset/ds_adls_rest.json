@@ -19,6 +19,35 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "status",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "employee_name",
+				"type": "String"
+			},
+			{
+				"name": "employee_salary",
+				"type": "String"
+			},
+			{
+				"name": "employee_age",
+				"type": "String"
+			},
+			{
+				"name": "profile_image",
+				"type": "String"
+			},
+			{
+				"name": "message",
+				"type": "String"
+			}
+		]
 	}
 }
