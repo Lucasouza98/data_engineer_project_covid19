@@ -5,7 +5,7 @@
 		"type": "RestService",
 		"typeProperties": {
 			"url": "https://dummy.restapiexample.com/api/v1/employees",
-			"enableServerCertificateValidation": true,
+			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
 	}
