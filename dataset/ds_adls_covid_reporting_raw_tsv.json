@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "population_by_age.tsv",
-				"folderPath": "population",
+				"folderPath": "population/population",
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
